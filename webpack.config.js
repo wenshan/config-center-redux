@@ -26,12 +26,12 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
-      exclude: /node_modules/
+      loaders: ['react-hot', 'babel']
+      //exclude: /node_modules/
     },{
         test: /\.jsx?$/,
         loader: 'babel',
-        exclude:/node_modules/,
+        //exclude:/node_modules/
         query: {
             presets: ['react', 'es2015'],
             plugins: ["transform-class-properties","transform-runtime",["antd",{libraryName:"antd-mobile",style:"css"}]]
