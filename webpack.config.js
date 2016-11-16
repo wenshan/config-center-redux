@@ -28,6 +28,24 @@ module.exports = {
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
       exclude: /node_modules/
+    },{
+        test: /\.jsx?$/,
+        loader: 'babel',
+        exclude:/node_modules/,
+        query: {
+            presets: ['react', 'es2015'],
+            plugins: ["transform-class-properties","transform-runtime",["antd",{libraryName:"antd-mobile",style:"css"}]]
+        },
+        include:__dirname
+    }, {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
+    },{
+        test: /\.css$/,
+        loader: 'style!css!postcss'
+    }, {
+        test: /\.(jpg|png)$/,
+        loader: 'url?limit=8192'
     }]
   }
 };

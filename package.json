@@ -70,5 +70,5 @@
     "version": "npm run build",
     "postversion": "git push && git push --tags && npm run clean",
     "prepublish": "npm run clean && npm run build"
-  },
+  }
 }
