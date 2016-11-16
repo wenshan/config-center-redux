@@ -15,7 +15,6 @@ class Header extends React.Component {
     }
     return (
           <header className="row header">
-              <Breadcrumb routes={this.props.routes} />
               <div className="toolbox">
                   <Button type="ghost">
                       {name}

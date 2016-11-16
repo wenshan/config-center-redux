@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
-//import Header from './header/Header.jsx'
-//import HeaderHorizontal from './header/HeaderHorizontal.jsx'
+import Header from './header/Header.js'
+import HeaderHorizontal from './header/HeaderHorizontal.js'
 
 class Index extends Component {
 
@@ -12,8 +12,9 @@ class Index extends Component {
 
   render () {
     return (
-      <div><h2>1111</h2>
-<Link to='/test'>test</Link>
+      <div>
+      <h2>Bill-List</h2>
+      <Link to='/billlist'>Bill-List</Link>
           {/* this will render the child routes */}
           {React.cloneElement(this.props.children, this.props)}
       </div>
