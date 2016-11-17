@@ -1,17 +1,17 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
+  cache:true,
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
     './src/entry/index'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    path: path.join(__dirname, '.build'),
+    filename: '[name].js'
+    //publicPath: '/static/'
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -22,25 +22,29 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions:['','.web.js','.js','.json','.jsx']
+    extensions: ['', '.js']
   },
   module: {
     loaders: [{
+      test: /\.js$/,
+      loaders: ['react-hot', 'babel']
+      //exclude: /node_modules/
+    },{
         test: /\.jsx?$/,
         loader: 'babel',
-        exclude:/node_modules/,
+        //exclude:/node_modules/
         query: {
             presets: ['react', 'es2015'],
             plugins: ["transform-class-properties","transform-runtime",["antd",{libraryName:"antd-mobile",style:"css"}]]
         },
         include:__dirname
-    },{
-        test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style','css!postcss!less')
+    }, {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
     },{
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style','css!postcss')
-    },{
+        loader: 'style!css!postcss'
+    }, {
         test: /\.(jpg|png)$/,
         loader: 'url?limit=8192'
     }]

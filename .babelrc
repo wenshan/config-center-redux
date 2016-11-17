@@ -1,1 +1,42 @@
-{ "presets": [ "es2015", "react", "stage-2" ], "plugins": [] }
+{
+  "presets": [
+      "es2015",
+      "react",
+      "stage-0",
+      "react-native"
+    ],
+  "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd-mobile"
+        }
+      ],
+      [
+        "transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }
+      ]
+  ],
+  "env": {
+    "development/client": {
+      "plugins": [
+        "react-transform"
+      ],
+      "extra": {
+        "react-transform": {
+	         "transforms": [{
+            "transform": "react-transform-hmr",
+            "imports": ["react"],
+            "locals": ["module"]
+          }, {
+            "transform": "react-transform-catch-errors",
+            "imports": ["react", "redbox-react"]
+          }]
+	       }
+      }
+    }
+  }
+}

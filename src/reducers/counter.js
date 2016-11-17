@@ -1,5 +1,4 @@
 import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../actions/index'
-
 export default function counter (state = { count: 0 }, action) {
   switch (action.type) {
     case INCREMENT_COUNTER:
