@@ -2,7 +2,7 @@
 import qwest from 'qwest';
 import { notification } from 'antd';
 import utils from './common.js';
-import Auth from '../components/authorize/Auth.jsx';
+import Auth from '../components/Auth/index.jsx';
 import Cookies from 'js-cookie';
 import React from 'react';
 

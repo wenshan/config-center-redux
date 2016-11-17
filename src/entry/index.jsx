@@ -1,11 +1,10 @@
-/*eslint-disable*/
+import './index.css'
+import '../common/lib.js'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Root from '../components/index/Root'
+import Root from '../components/Root/index'
 import createBrowserHistory from 'history/lib/createBrowserHistory'
-import '../common/lib.js'
-import './index.css'
-/*eslint-enable*/
+
 
 const history = createBrowserHistory()
 

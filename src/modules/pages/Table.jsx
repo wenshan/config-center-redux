@@ -3,7 +3,7 @@ import { Table, Modal } from 'antd';
 import React from 'react';
 
 import Utils from '../../utils/index';
-import Auth from '../../components/authorize/Auth';
+import Auth from '../../components/Auth/';
 const ajax = Utils.ajax,
   commonUtils = Utils.common;
 

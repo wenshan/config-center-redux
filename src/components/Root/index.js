@@ -16,7 +16,7 @@ function createElements (history) {
 
   if (typeof __DEVTOOLS__ !== 'undefined' && __DEVTOOLS__) {
     /*eslint-disable*/
-    const DevTools = require('../devTools/index')
+    const DevTools = require('../DevTools/index')
     /*eslint-enable*/
     elements.push(<DevTools key="devtools" />)
   }

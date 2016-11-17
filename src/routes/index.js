@@ -1,9 +1,7 @@
-/*eslint-disable*/
 import React from 'react'
 import { Route } from 'react-router'
-import Index from '../components/index/Index'
+import Index from '../components/Index/index'
 import * as modulesApp from '../modules/index'
-/*eslint-enable*/
 
 const {
   Counter, Bill

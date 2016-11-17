@@ -1,5 +1,5 @@
-//import 'antd/dist/antd.less';
-//import './index.less';
+import 'antd/dist/antd.less';
+import './index.less';
 
 import Utils from '../utils/index';
 import Cookies from 'js-cookie';
@@ -7,11 +7,11 @@ const Ajax = Utils.ajax;
 const Login = Utils.common.login;
 
 
-global.Domain = 'http://config.gooagoo.com';
-global.API = {
+window.Domain = 'http://config.gooagoo.com';
+window.API = {
   init: 'http://data.${window.Domain}:8080' + '/init.json',
 };
-global.COOKIES_INFO = {};
+window.COOKIES_INFO = {};
 COOKIES_INFO.token = Cookies.get('com.gooagoo.passpart.sso.token.name') || 'undefined';
 COOKIES_INFO.user_data = {};
 
