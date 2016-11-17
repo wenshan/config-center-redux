@@ -1,5 +1,5 @@
-import 'antd/dist/antd.less';
-import './index.less';
+//import 'antd/dist/antd.less';
+//import './index.less';
 
 import Utils from '../utils/index';
 import Cookies from 'js-cookie';

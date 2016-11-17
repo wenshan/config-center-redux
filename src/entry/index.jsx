@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import Root from '../components/index/Root'
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 import '../common/lib.js'
-import './index.less'
+import './index.css'
 /*eslint-enable*/
 
 const history = createBrowserHistory()
