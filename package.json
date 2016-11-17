@@ -1,6 +1,6 @@
 {
   "name": "config-center-redux",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "config-center-redux",
   "entry": {
     "index": "./src/entry/index.jsx"
@@ -95,18 +95,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "DEBUG=true node server.js",
-    "clean": "rimraf lib dist coverage",
-    "lint": "eslint src test",
-    "test": "mocha --compilers js:babel/register --recursive",
-    "test:watch": "npm test -- --watch",
-    "test:cov": "babel-node $(npm bin)/isparta cover $(npm bin)/_mocha -- --recursive",
-    "check": "npm run lint && npm run test",
-    "preversion": "npm run clean && npm run check",
-    "build": "npm run build",
-    "postversion": "git push && git push --tags && npm run clean",
-    "publish": "npm run clean && npm run build",
-    "dll2": "webpack --config webpack.dll.js",
-    "build2": "webpack --config webpack.config.build.js --progress --colors",
-    "dev2": "webpack-dev-server --inline --hot --content-base dist --history-api-fallback"
+    "build": "webpack --config webpack.build.js",
+    "dll": "webpack --config webpack.dll.js",
   }
 }
