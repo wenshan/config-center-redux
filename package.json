@@ -96,6 +96,6 @@
     "start": "node server.js",
     "dev": "DEBUG=true node server.js",
     "build": "webpack --config webpack.build.js",
-    "dll": "webpack --config webpack.dll.js",
+    "dll": "webpack --config webpack.dll.js"
   }
 }

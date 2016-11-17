@@ -36,7 +36,7 @@ module.exports = {
         include:__dirname
     },{
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style','css!postcss!less')
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
     },{
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style','css!postcss')
