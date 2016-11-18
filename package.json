@@ -99,9 +99,9 @@
     "webpack-hot-middleware": "^2.4.1"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "DEBUG=true node server.js",
-    "dev2": "dora --plugins \"proxy,webpack,livereload?enableJs=false&injectHost=127.0.0.1\"",
-    "build2": "atool-build -o ./.build/${npm_package_family}/${npm_package_name/{npm_package_version}"
+    "dev": "dora --plugins \"proxy,webpack,livereload?enableJs=false&injectHost=127.0.0.1\"",
+    "build": "atool-build -o ./.build/${npm_package_family}/${npm_package_name/{npm_package_version}",
+    "lint": "eslint --ext .js,.jsx src",
+    "test": "atool-test"
   }
 }
